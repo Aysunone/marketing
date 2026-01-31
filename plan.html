@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketinq Agentliyi</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fcfcfc;
+            color: #2d2d2d;
+            padding: 80px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #1a1a1a;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            width: 60%;
+            height: 3px;
+            background-color: #333;
+        }
+
+        /* Planların Grid sistemi */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            align-items: center;
+        }
+
+        /* Plan Kartı */
+        .pricing-card {
+            background: #ffffff;
+            padding: 50px 40px;
+            border: 1px solid #f0f0f0;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        /* Orta planı fərqləndirmək üçün */
+        .pricing-card.featured {
+            background-color: #f8f8f8;
+            border: 1px solid #333;
+            transform: scale(1.05);
+            z-index: 2;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .plan-name {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #888;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .pricing-card.featured .plan-name {
+            color: #000;
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+        }
+
+        .price span {
+            font-size: 16px;
+            font-weight: 400;
+            color: #888;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .features-list li {
+            padding: 12px 0;
+            font-size: 15px;
+            color: #555;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Təsdiq işarəsi stili */
+        .features-list li::before {
+            content: '✓';
+            margin-right: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Düymə stili */
+        .plan-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: transparent;
+            border: 1px solid #333;
+            color: #333;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card.featured .plan-btn {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .plan-btn:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Mobil uyğunluq */
+        @media (max-width: 900px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Xidmət Planları</h2>
+        </div>
+
+        <div class="pricing-grid">
+            
+            <div class="pricing-card">
+                <span class="plan-name">Başlanğıc</span>
+                <div class="price">299<span>₼ / ay</span></div>
+                <ul class="features-list">
+                    <li>Sosial media idarəçiliyi</li>
+                    <li>Həftəlik 3 paylaşım</li>
+                    <li>Aylıq hesabat</li>
+                    <li>SMM strategiyası</li>
+                </ul>
+                <a href="#" class="plan-btn">Seçim et</a>
+            </div>
+
+            <div class="pricing-card featured">
+                <span class="plan-name">Professional</span>
+                <div class="price">599<span>₼ / ay</span></div>
+                <ul class="features-list">
+                    <li>Hər şey Başlanğıc planında</li>
+                    <li>Həftəlik 5 paylaşım</li>
+                    <li>Reklam idarəçiliyi</li>
+                    <li>Brend dizaynı xidməti</li>
+                    <li>24/7 Dəstək</li>
+                </ul>
+                <a href="#" class="plan-btn">Ən çox seçilən</a>
+            </div>
+
+            <div class="pricing-card">
+                <span class="plan-name">Biznes</span>
+                <div class="price">999<span>₼ / ay</span></div>
+                <ul class="features-list">
+                    <li>Hər şey Professional planda</li>
+                    <li>SEO optimizasiyası</li>
+                    <li>Video çəkilişlər</li>
+                    <li>Veb-sayt dəstəyi</li>
+                </ul>
+                <a href="#" class="plan-btn">Seçim et</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
