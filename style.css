@@ -2014,3 +2014,35 @@ a {
 .aysun-hover-border-pale-blue:hover {
     border-color: #e7ffff !important
 }
+.wp{
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: url(whatsap.svg)center/cover;
+    z-index: 5;
+    cursor: pointer;
+    transition: .4s;
+}
+.wp:hover{
+    scale: 1.1;
+    transform: rotate(180deg);
+}
+.ph{
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    background: url(ph.svg)center/cover;
+    z-index: 5;
+    cursor: pointer;
+    transition: .4s;
+    transform: rotate(130deg);
+}
+.ph:hover{
+    scale: 1.1;
+    transform: rotate(60deg);
+}
+
